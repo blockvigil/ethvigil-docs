@@ -116,13 +116,13 @@ ev-cli deploy <path-to-solidity-contract> \
  --contractName=<contract-name> \
  --constructorInputs='JSON representation of the constructor arguments'
 ```
->Currently EthVigil API accepts **only one** Solidity file that contains the entire smart contract logic. It will be enhanced in the near future where we >will allow multiple files to be uploaded to ease development with imports of other modules and libraries
+>Currently EthVigil API accepts **only one** Solidity file that contains the entire smart contract logic. It will be enhanced in the near future where we will allow multiple files to be uploaded to ease development with imports of other modules and libraries
 
 ### ERC20 token contract example - token.sol
 ```bash
-ev-cli deploy token.sol --contractName=FixedSupply
+ev-cli deploy token.sol --contractName=FixedSupplyToken
 
-Contract FixedSupply deployed successfully
+Contract FixedSupplyToken deployed successfully
 Contract Address: 0xb8254a02fa7da599053006913bbed0a13fa0385f
 Deploying tx: 0xd5318cf2bc163e267fecbb85ad2688f088fb2f45bc93baa1d9530f2d23b64a26
 ```
@@ -180,4 +180,30 @@ EthVigil deploy response:
 Contract SignerControlBase deployed successfully
 Contract Address: 0x746254cb1888a0f073fca2cf397457fb3e54396f
 Deploying tx: 0xcb2cb6f036e01eb22707084f4780d731ee959a50fe6b6a562643cfa40f3d5e2f
+```
+## More CLI features
+### Dump local settings
+```
+ev-cli dumpsettings
+
+{'PRIVATEKEY': '0xprivatekeyhexstring', 'INTERNAL_API_ENDPOINT': 'http://192.168.99.100:8080/v0.1', 'REST_API_ENDPOINT': 'http://localhost:9000/api/v0.1', 'ETHVIGIL_USER_ADDRESS': '0x40b93b89f89c674fB97db61d4b2D9CE2C2Cf6EB6', 'ETHVIGIL_API_KEY': '80340b2a-633b-4a33-898c-06055ee10a34'}
+```
+### Reset
+If you wish to begin with a fresh slate, run the tool with the `reset` argument.
+>You will lose all saved state, including the private key used to identify your account on EthVigil.
+You should either backup the information or request a new invite code
+
+```bash
+ev-cli reset
+
+Do you want to reset the current EthVigil CLI configuration and state? [y/N]:
+```
+### Backup settings and recover later
+
+```bash
+ev-cli dumpsettings > settings-backup.json
+
+ev-cli reset
+
+ev-cli importsettings setting-backup.json
 ```
