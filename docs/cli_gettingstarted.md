@@ -11,50 +11,32 @@ The guide will introduce you to the EthVigil API endpoints with the help of a CL
 
 >If you wish to setup the CLI tool later, skip this section of the guide to use the web interface directly [⏩ ⏩ Using the Web Interface](web_gettingstarted.md)
 
-## Requirements for installing the CLI tool
-* Python 3
+## Recommended Installation
+Download the [Linux](https://beta.ethvigil.com/downloads/ev-cli-linux.zip "Linux Zip File") or [Mac OSX](https://beta.ethvigil.com/downloads/ev-cli-osx.zip "Mac OSX Zip File") binary. You can unzip from a terminal with the following command.
+`unzip /path/to/ethvigil.zip`
 
-## Recommended Installation (Pyenv with virtualenv support)
+Most people would keep ev-cli in their primary user folder or set an alias for easy command-line access.
 
-### On macOS
-Credits: [this guide](https://medium.com/python-every-day/python-development-on-macos-with-pyenv-2509c694a808?)
-```bash
-# Install Homebrew if it isn't already available
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-# Install pyenv
-brew install pyenv
-# Add pyenv initializer to shell startup script
-echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
-# Reload your profile
-source ~/.bash_profile
-# pyenv install <python version>
-pyenv install 3.6.5
-# set global python
-pyenv global 3.6.5
-# Install pyenv-virtualenv
-brew install pyenv-virtualenv
-# Add pyenv-virtualenv initializer to shell startup script
-echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
-# Reload your profile
-source ~/.bash_profile
-# Create a new virtual environment
-pyenv virtualenv 3.6.5 my-hackpad
-# Activate Virtual Environment
-pyenv activate my-hackpad
-```
-
-## CLI tool Installation (via pip)
+## Advanced Installation (via pip)
 
 ```bash
 # clone the git repo
-git clone
+git clone https://github.com/BlockVigil/ethvigil-cli.git
 cd ethvigil-cli
 pip install -e .
 ```
 ## Sign up with invite code
+
 ```bash
 ev-cli init
 ```
+
+>If you do not have ev-cli in your path and/or calling it directly, you will need to prefix `./`
+
+```bash
+./ev-cli init
+```
+
 
 On the next prompt you will be asked for your invite code. The invite code should have been sent to the email address you used to register.
 
@@ -63,11 +45,11 @@ On the next prompt you will be asked for your invite code. The invite code shoul
 You should see something like the following
 
 ```
-http://alpha-api.ethvigil.com/v0.1/signup
-{"success":true,"data":{"status":"active","email":"anomitghosh@gmail.com"}}
+http://beta.ethvigil.com/api/signup
+{"success":true,"data":{"status":"active","email":"swaroop@ethvigil.com"}}
 Sign up succeeded...
 Logging in with your credentials...
-You have signed up and logged in successfully to EthVigil Alpha
+You have signed up and logged in successfully to EthVigil Beta
 ---YOU MIGHT WANT TO COPY THESE DETAILS TO A SEPARATE FILE---
 ===Private key (that signs messages to interact with EthVigil APIs===
 0xprivatekeyhexstring
@@ -247,7 +229,7 @@ Succeded in adding hook to monitor all contract txs
 ```
 ev-cli dumpsettings
 
-{'PRIVATEKEY': '0xprivatekeyhexstring', 'INTERNAL_API_ENDPOINT': 'http://192.168.99.100:8080/v0.1', 'REST_API_ENDPOINT': 'http://localhost:9000/api/v0.1', 'ETHVIGIL_USER_ADDRESS': '0x40b93b89f89c674fB97db61d4b2D9CE2C2Cf6EB6', 'ETHVIGIL_API_KEY': '80340b2a-633b-4a33-898c-06055ee10a34'}
+{'PRIVATEKEY': '0xprivatekeyhexstring', 'INTERNAL_API_ENDPOINT': 'https://beta.ethvigil.com/api', 'REST_API_ENDPOINT': 'http://localhost:9000/api/v0.1', 'ETHVIGIL_USER_ADDRESS': '0x40b93b89f89c674fB97db61d4b2D9CE2C2Cf6EB6', 'ETHVIGIL_API_KEY': '80340b2a-633b-4a33-898c-06055ee10a34'}
 ```
 ### Reset
 If you wish to begin with a fresh slate, run the tool with the `reset` argument.

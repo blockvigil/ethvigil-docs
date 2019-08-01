@@ -5,7 +5,7 @@ sidebar_label: Smart Contract REST APIs
 ---
 
 ## Prerequisites
-You are familiar with deploying contracts [via the CLI tool](cli_gettingstarted.md) or [the web frontend](web_gettingstarted.md.
+You are familiar with deploying contracts [via the CLI tool](cli_gettingstarted.md) or [the web frontend](web_gettingstarted.md).
 
 ## OpenAPI Specification
 Once you deploy a contract via EthVigil, we automatically generate REST API endpoints over HTTPS which are available as an [OpenAPI Specification](https://swagger.io/specification/).
@@ -15,7 +15,7 @@ Once you deploy a contract via EthVigil, we automatically generate REST API endp
 ```
 ev-cli getoas 0xbbd8cda5503e1df2983f738ad131a2304528e3dd
 
-http://192.168.99.100:8080/v0.1/swagger/0xbbd8cda5503e1df2983f738ad131a2304528e3dd/?key=80340b2a-633b-4a33-898c-06055ee10a34
+https://beta.ethvigil.com/api/swagger/0xbbd8cda5503e1df2983f738ad131a2304528e3dd/?key=80340b2a-633b-4a33-898c-06055ee10a34
 ```
 The contract being used for this guide comes bundled with the CLI tool by the name `token.sol` and follows the standard implementation of an [ERC20 token contract](https://theethereum.wiki/w/index.php/ERC20_Token_Standard).
 

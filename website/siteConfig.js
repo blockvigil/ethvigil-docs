@@ -32,7 +32,7 @@ const siteConfig = {
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  //projectName: 'EthVigil',
+  projectName: 'ethvigil-cli',
   organizationName: 'blockvigil',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
@@ -51,7 +51,7 @@ scrollToTop: true,
   //users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/blockvigil.png',
+  //headerIcon: 'img/blockvigil.png',
   footerIcon: 'img/square.png',
   favicon: 'img/square.png',
 
@@ -77,7 +77,7 @@ scrollToTop: true,
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} BlockVigil Inc.`,
-
+  repoUrl: 'https://github.com/BlockVigil/ethvigil-cli',
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
     theme: 'default',
