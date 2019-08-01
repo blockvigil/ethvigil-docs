@@ -1,1 +1,1 @@
-Getting started README at https://gitlab.com/eth-vigil/docs-test/tree/master/website
+Getting started README at https://github.com/blockvigil/ethvigil-docs/tree/master/website
