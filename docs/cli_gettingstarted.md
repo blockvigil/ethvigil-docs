@@ -91,7 +91,7 @@ ev-cli accountinfo
 Contracts events fired to registered hooks: 	 {'usage': 0, 'limit': 1000}
 =============
 
-Registered integrations/hooks: 	 {'usage': 0, 'limit': 10}
+Registered integrations/hooks: 	 {'usage': 1, 'limit': 10}
 =============
 
 EthVigil API key: 	 80340b2a-633b-4a33-898c-06055ee10a34
@@ -102,6 +102,21 @@ REST API prefix: 	 http://localhost:9000/api/v0.1
 
 Contracts deployed/verified:
 =============
+Name: FixedSupplyToken
+Address: 0xb8254a02fa7da599053006913bbed0a13fa0385f
+--------------------
+Name: FixedSupplyToken
+Address: 0x7b5622290fd8fb7b89707a7dc68201d5eb833507
+--------------------
+Name: SignerControlBase
+Address: 0x746254cb1888a0f073fca2cf397457fb3e54396f
+--------------------
+Name: FixedSupplyToken
+Address: 0xbbd8cda5503e1df2983f738ad131a2304528e3dd
+--------------------
+Name: Ballot
+Address: 0x616cc6fd735462df69fc0f5bdb61bc12921b3b17
+--------------------
 ```
 
 ## Deploy a Solidity smart contract
@@ -153,7 +168,7 @@ An equivalent representation of the constructor inputs in JSON would look like
 ]
 ```
 
-**Example to generate the same in Python follows**
+**Example to generate the JSON serialized string with Python follows**
 ```python
 $ python
 >>> import json
@@ -194,23 +209,23 @@ To test webhooks, it is suggested to set up a webhook listener on a service like
 >EthVigil supports only HTTPS enabled webhook endpoints
 
 Register the webhook endpoint to get an ID by which the endpoint willl be identified
-```bash
+```
 ev-cli registerhook 0xbbd8cda5503e1df2983f738ad131a2304528e3dd https://webhook.site/9facc063-beb1-483f-b24a-408375e5d1b6
 
 {"success":true,"data":{"id":10}}
 Succeeded in registering webhook with Ethvigil API...
 EthVigil Hook ID: 10
 ```
-Subscribe to the `Transfer` and `Approval` events on the contract
+#### Subscribe to the `Transfer` and `Approval` events on the contract
 
- ```
+```
 ev-cli addhooktoevent 0xbbd8cda5503e1df2983f738ad131a2304528e3dd 10 Transfer,Approval
 
 Registering | hook ID: 10 | events: ['Transfer', 'Approval'] | contract: 0xbbd8cda5503e1df2983f738ad131a2304528e3dd
 {"success":true}
 Succeeded in adding hook
  ```
-Subscribe to all events, with a wildcard, *
+#### Subscribe to all events, with a wildcard, *
 
 ```
 ev-cli addhooktoevent 0xbbd8cda5503e1df2983f738ad131a2304528e3dd 10 '*'
@@ -219,6 +234,14 @@ Registering | hook ID: 10 | events: ['*'] | contract: 0xbbd8cda5503e1df2983f738a
 {"success":true}
 Succeeded in adding hook
 ```
+#### Subscribe to all transactions sent to the contract
+```
+ev-cli enabletxmonitor 0xbbd8cda5503e1df2983f738ad131a2304528e3dd 10
+
+{"success":true}
+Succeded in adding hook to monitor all contract txs
+```
+
 ## More CLI features
 ### Dump local settings
 ```
