@@ -181,6 +181,44 @@ Contract SignerControlBase deployed successfully
 Contract Address: 0x746254cb1888a0f073fca2cf397457fb3e54396f
 Deploying tx: 0xcb2cb6f036e01eb22707084f4780d731ee959a50fe6b6a562643cfa40f3d5e2f
 ```
+
+## Adding integrations
+You can add integrations like webhooks/email notifications/slack notifications on a contract deployed via EthVigil APIs.
+* You can monitor
+  * specific/all events being emitted on a contract
+  * all transactions taking place on a contract
+* You recive the relevant payloads like event topics or transaction input data
+
+### Webhooks
+To test webhooks, it is suggested to set up a webhook listener on a service like https://webhook.site
+>EthVigil supports only HTTPS enabled webhook endpoints
+
+Register the webhook endpoint to get an ID by which the endpoint willl be identified
+```bash
+ev-cli registerhook 0xbbd8cda5503e1df2983f738ad131a2304528e3dd https://webhook.site/9facc063-beb1-483f-b24a-408375e5d1b6
+
+{"success":true,"data":{"id":10}}
+Succeeded in registering webhook with Ethvigil API...
+EthVigil Hook ID: 10
+```
+Subscribe to the `Transfer` and `Approval` events on the contract
+
+ ```
+ev-cli addhooktoevent 0xbbd8cda5503e1df2983f738ad131a2304528e3dd 10 Transfer,Approval
+
+Registering | hook ID: 10 | events: ['Transfer', 'Approval'] | contract: 0xbbd8cda5503e1df2983f738ad131a2304528e3dd
+{"success":true}
+Succeeded in adding hook
+ ```
+Subscribe to all events, with a wildcard, *
+
+```
+ev-cli addhooktoevent 0xbbd8cda5503e1df2983f738ad131a2304528e3dd 10 '*'
+
+Registering | hook ID: 10 | events: ['*'] | contract: 0xbbd8cda5503e1df2983f738ad131a2304528e3dd
+{"success":true}
+Succeeded in adding hook
+```
 ## More CLI features
 ### Dump local settings
 ```

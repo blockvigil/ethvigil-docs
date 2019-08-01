@@ -42,12 +42,12 @@ const siteConfig = {
   headerLinks: [
     {doc: 'cli_onboarding', label: 'Docs'},
     //{doc: 'doc4', label: 'API'},
-    {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
+    //{page: 'help', label: 'Help'},
+    //{blog: true, label: 'Blog'},
   ],
 
   // If you have users set above, you add it here:
-  users,
+  //users,
 
   /* path to images for header/footer */
   headerIcon: 'img/blockvigil.png',
