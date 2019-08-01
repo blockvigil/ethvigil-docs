@@ -1,8 +1,6 @@
 {
   "docs": {
-    "Getting Started": ["cli"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
+    "Getting Started": ["cli_onboarding", "http_onboarding"]
   },
   "docs-other": {
     "First Category": ["doc4", "doc5"]
