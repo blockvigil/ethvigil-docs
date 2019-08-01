@@ -25,7 +25,7 @@ const users = [
 const siteConfig = {
   title: 'EthVigil', // Title for your website.
   tagline: 'API documentation for EthVigil APIs',
-  url: 'https://github.com/blockvigil', // Your website URL
+  url: 'https://ethvigil.com', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
@@ -33,11 +33,12 @@ const siteConfig = {
 
   // Used for publishing and more
   //projectName: 'EthVigil',
-  //organizationName: 'blockvigil',
+  organizationName: 'blockvigil',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
-
+twitterUsername: 'blockvigil',
+scrollToTop: true,
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'cli_onboarding', label: 'Docs'},
@@ -51,8 +52,8 @@ const siteConfig = {
 
   /* path to images for header/footer */
   headerIcon: 'img/blockvigil.png',
-  footerIcon: 'img/blockvigil.png',
-  favicon: 'img/favicon.ico',
+  footerIcon: 'img/square.png',
+  favicon: 'img/square.png',
 
   /* Colors for website */
   colors: {

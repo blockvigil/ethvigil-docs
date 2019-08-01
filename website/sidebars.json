@@ -1,7 +1,7 @@
 {
   "docs": {
-    "Getting Started": ["cli_onboarding", "web_onboarding"],
-  },
+    "Getting Started": ["cli_onboarding", "contracts_restapi", "web_onboarding"]
+},
   "docs-other": {
     "First Category": ["doc4", "doc5"]
   }
