@@ -9,7 +9,7 @@ The guide will introduce you to the EthVigil API endpoints with the help of a CL
 * access your account information on EthVigil
 * deploy a Solidity smart contract through the CLI tool
 
->We have also included examples of equivalent cURL/Python requests. If you wish to setup the CLI tool later, skip this section of the guide to learn about the HTTP request endpoints ⏩ ⏩ [Using the HTTP APIs](http_gettingstarted.md)
+>If you wish to setup the CLI tool later, skip this section of the guide to use the web interface directly [⏩ ⏩ Using the Web Interface](web_gettingstarted.md)
 
 ## Requirements for installing the CLI tool
 * Python 3
@@ -202,7 +202,7 @@ You can add integrations like webhooks/email notifications/slack notifications o
 * You can monitor
   * specific/all events being emitted on a contract
   * all transactions taking place on a contract
-* You recive the relevant payloads like event topics or transaction input data
+* You receive the relevant payloads like event topics or transaction input data
 
 ### Webhooks
 To test webhooks, it is suggested to set up a webhook listener on a service like https://webhook.site
