@@ -5,9 +5,7 @@ sidebar_label: Smart Contract REST APIs
 ---
 
 ## Prerequisites
-You are familiar with deploying contracts [via the CLI tool](cli_gettingstarted.md) or the web frontend.
-
-*TODO: link to guide for the web frontend*
+You are familiar with deploying contracts [via the CLI tool](cli_gettingstarted.md) or [the web frontend](web_gettingstarted.md.
 
 ## OpenAPI Specification
 Once you deploy a contract via EthVigil, we automatically generate REST API endpoints over HTTPS which are available as an [OpenAPI Specification](https://swagger.io/specification/).
