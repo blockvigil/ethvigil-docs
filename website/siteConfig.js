@@ -77,7 +77,7 @@ scrollToTop: true,
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} BlockVigil Inc.`,
-  repoUrl: 'https://github.com/BlockVigil/ethvigil-docs',
+  repoUrl: 'https://github.com/blockvigil/ethvigil-docs',
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
     theme: 'default',

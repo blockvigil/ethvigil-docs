@@ -21,7 +21,7 @@ Most people would keep ev-cli in their primary user folder or set an alias for e
 
 ```bash
 # clone the git repo
-git clone https://github.com/BlockVigil/ethvigil-cli.git
+git clone https://github.com/blockvigil/ethvigil-cli.git
 cd ethvigil-cli
 pip install -e .
 ```
