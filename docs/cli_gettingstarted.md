@@ -27,6 +27,8 @@ pip install -e .
 ```
 ## Sign up with invite code
 
+Head to [EthVigil Beta](https://beta.ethvigil.com/?clisignup=true) to generate an invite code.
+
 ```bash
 ev-cli init
 ```
