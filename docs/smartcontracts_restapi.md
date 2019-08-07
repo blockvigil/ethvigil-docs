@@ -66,7 +66,7 @@ The request body is already populated with the necessary parameters, courtesy th
 
 ![EthVigil HTTP POST call headers with API key for transfer() method](assets/oas/postman-05-ethvigil-transfer-02-headers.png)
 
->Referring back to the section on [Subscribing to events on a contract](cli_gettingstarted.mod#subscribe-to-the-transfer-and-approval-events-on-the-contract), there was a webhook endpoint already registered to listen to a `Transfer` event
+>Referring back to the section on [Subscribing to events on a contract](cli_gettingstarted.md#subscribe-to-the-transfer-and-approval-events-on-the-contract), there was a webhook endpoint already registered to listen to a `Transfer` event
 
 **Once entering the necessary body and header request parameters, we complete the HTTP POST to `transfer()`**
 
