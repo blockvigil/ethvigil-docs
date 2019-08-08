@@ -1,11 +1,5 @@
 {
   "docs": {
-    "Getting Started": ["cli_onboarding",
-      "web_onboarding",
-      "contracts_restapi"
-    ],
-    "Walkthroughs": [
-      "erc20_example_code"
-    ]
+    "Getting Started": ["cli_onboarding", "web_onboarding", "contracts_restapi"]
   }
 }

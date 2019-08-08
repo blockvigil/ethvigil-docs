@@ -81,3 +81,9 @@ By default, we subscribe you to all events but you can chose one or more such as
 You can similarly setup a Slack integration. We will post all events to a channel of your choice.
 
 ![Add Slack](assets/web-ui/slack_notification.png)
+
+## Deploying Apps
+
+We allow packaged apps to quickly integrate with our APIs against known smart contracts. If you deployed the `MicroBlog` as is, you'll see an option to Deploy on Heroku/Github pages. Check out the [EthVigil Microblog](https://ethvigil.github.io/microblog/) to see a live app in action.
+
+![Deploy App](assets/web-ui/deploy_app.png)

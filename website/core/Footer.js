@@ -37,19 +37,19 @@ class Footer extends React.Component {
           </a>
           <div>
             <h5>Docs</h5>
-            <a href={this.docUrl('cli_gettingstarted.html', this.props.language)}>
+            <a href={this.docUrl('cli_onboarding')}>
               Getting Started with CLI
             </a>
-            <a href={this.docUrl('web_gettingstarted.html', this.props.language)}>
+            <a href={this.docUrl('web_onboarding')}>
               Getting Started with web UI
             </a>
-            <a href={this.docUrl('smartcontracts_restapi.html', this.props.language)}>
+            <a href={this.docUrl('contracts_restapi')}>
               Interacting with contracts over REST API
             </a>
           </div>
           <div>
             <h5>Community</h5>
-            <a href="https://discord.gg/5zaS3fv">Project Chat</a>
+            <a href="https://discord.gg/5zaS3fv">Discord</a>
             <a
               href="https://twitter.com/blockvigil"
               target="_blank"
