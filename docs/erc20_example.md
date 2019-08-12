@@ -5,13 +5,13 @@ sidebar_label: Working with mintable ERC20 token contract
 ---
 The guide will introduce you to working with an ERC20 token contract via the EthVigil API endpoints.
 
-These steps are also packaged into a CLI tool designed in Python for you to play around with a pre-supplied ERC20 contract. Visit the repo at ***TODO: github python code link*** to clone and get hacking away.
+These steps are also packaged into a CLI tool designed in Python for you to play around with a pre-supplied ERC20 contract. [Visit the repo](https://github.com/blockvigil/api-usage-examples/tree/master/erc20) to clone and get hacking away.
 
 Alternately, you can keep a note of
 * the private key that identifies your user account uniquely on EthVigil
 * the API key uniquely alloted to your user account that allows you to make authenticated HTTP requests to the REST API endpoints generated for your smart contract
 
-...and follow along the code examples as stand alone scripts ***TODO: link to standalone scripts directory in github repo of erc20 example code***
+...and follow along the code examples as [standalone scripts](https://github.com/blockvigil/api-usage-examples/tree/master/erc20/standalone_scripts)
 
 ## Prerequisites
 It is absolutely critical that you would have gone through at least one of our onboarding guides that will teach you the way EthVigil handles user accounts, signing up, logging in, deploying contracts etc.
@@ -609,31 +609,31 @@ Method arguments:
 ![decrease allowance event data webhook](assets/code-examples/decreaseallowance-webhook.png)
 
 
-## Working with Metamask/web3 (a dApp experience) 
+## Working with Metamask/web3 (a dApp experience)
 
-* Metamask/ web3.py/ web3.js happen to be quite popular approaches among beginners and experienced Ethereum developers alike to interact with smart contracts and prototype iteratively. 
+* Metamask/ web3.py/ web3.js happen to be quite popular approaches among beginners and experienced Ethereum developers alike to interact with smart contracts and prototype iteratively.
 
-* On testnets, this is a great way to test out how your smart contracts would behave for users with different identities because it costs nothing to switch account addresses and send out a bunch of transactions from them. 
+* On testnets, this is a great way to test out how your smart contracts would behave for users with different identities because it costs nothing to switch account addresses and send out a bunch of transactions from them.
 
-* Keeping this in mind, the following is an example that is a follow up to the [section on Approval](erc20_example.md#approve) 
+* Keeping this in mind, the following is an example that is a follow up to the [section on Approval](erc20_example.md#approve)
 
 * This example makes it easier since we have removed ownership roles and access control on the contract, so that anyone can play around with it.
 
-### Transfer tokens on behalf 
+### Transfer tokens on behalf
 
 * Refer the sections for a refresher if you feel lost.
   * [on `msg.sender`](erc20_example.md#a-note-about-msgsender)
   * [Approval](erc20_example.md#approve)
   * [checking allowance](erc20_example.md#check-allowance)
-  
+
 * We assume this scenario: `0x774246187E1E2205C5920898eEde0945016080Df` is a user sitting in a distant land who
-   * is authorized to transfer at most 1000 tokens **on your behalf**. 
+   * is authorized to transfer at most 1000 tokens **on your behalf**.
    * not familiar with REST APIs
    * does not want to use EthVigil APIs out of trust issues
    * is familiar with Metamask and can load contracts on the Remix IDE to call methods on them
- 
+
 ![ERC20 interaction](assets/code-examples/EthVigil-ERC20-interaction.png)
-   
+
 >`0x3dc7d43d5f180661970387a4f89c7e715b567512` is your identity by default when interacting with smart contracts via EthVigil APIs in beginner-friendly mode
 
 >Ensure the account `0x3dc7d43d5f180661970387a4f89c7e715b567512` - is allocated enough tokens for a transferFrom call to be valid. Refer to the [`mint()` section](erc20_example.md#minting) to allocate certain number of tokens to this address. For example,
