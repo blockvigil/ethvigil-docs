@@ -58,7 +58,7 @@ in the implementation of the final inherited token contract.
 
 ## Deploy the ERC20 contract
 
-You can find the Solidity source code here ***TODO: insert link to contract file from github repo***
+You can find the Solidity [source code here](https://github.com/blockvigil/api-usage-examples/blob/master/erc20/ERC20Mintable.sol).
 
 You can deploy the contract [from the web UI](web_gettingstarted.md#deploy-a-solidity-smart-contract) or follow the code examples below.
 
