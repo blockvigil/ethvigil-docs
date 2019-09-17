@@ -5,7 +5,8 @@
       "contracts_restapi"
     ],
     "Walkthroughs": [
-      "erc20_example_code"
+      "erc20_example_code",
+      "eth_sign_example_code"
     ]
   }
 }
