@@ -21,11 +21,22 @@ const users = [
   */
 ];
 
+const extlink = require('remarkable-extlink');
+
 
 const siteConfig = {
   title: 'EthVigil', // Title for your website.
   tagline: 'API documentation for EthVigil APIs',
   url: 'https://ethvigil.com', // Your website URL
+  markdownPlugins: [
+    function(md) {
+      extlink(md, {
+        host: 'ethvigil.com', // The hrefs that you DON'T want to be external
+        target: '_blank',
+        rel: 'nofollow noopener',
+      });
+    },
+  ],
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
