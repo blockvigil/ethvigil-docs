@@ -18,7 +18,7 @@ It is absolutely critical that you would have gone through at least one of our o
 
 If you haven't, go check them out.
 * [Getting started with the CLI tool](cli_gettingstarted.md)
-* [Getting started with the web UI tool](web_gettingstarted.md)
+* [Getting started with the Web UI](web_gettingstarted.md)
 
 ## Before we begin
 

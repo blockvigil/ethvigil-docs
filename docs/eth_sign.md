@@ -9,7 +9,7 @@ It is absolutely critical that you would have gone through at least one of our o
 
 If you haven't, go check them out.
 * [Getting started with the CLI tool](cli_gettingstarted.md)
-* [Getting started with the web UI tool](web_gettingstarted.md)
+* [Getting started with the Web UI](web_gettingstarted.md)
 
 While you are at it, you might also want to check out [working with an ERC20 contract.](erc20_example.md)
 
