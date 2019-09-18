@@ -173,7 +173,7 @@ We want to add as many unique fields in a message that would avoid "replay" atta
 
 ## Generating signature and submitting to the smart contract
 
-The code snippets can be found in the github repo that includes a command line script.
+The code snippets can be found in the [github repo](https://github.com/blockvigil/api-usage-examples/tree/master/eth_sign) that includes a command line script.
 
 ### Setting up the contract
 
