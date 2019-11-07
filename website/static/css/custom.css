@@ -1,5 +1,12 @@
 /* your custom css */
 
+.button {
+	max-width: 375px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
 
