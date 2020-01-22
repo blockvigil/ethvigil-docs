@@ -12,35 +12,28 @@ The guide will introduce you to the EthVigil API endpoints with the help of a We
 
 >If you wish to setup the CLI tool, skip this section of the guide to learn how to set it up [⏩ ⏩ Using the CLI tool](cli_gettingstarted.md)
 
-## Requirements for using the Web Interface
-* [Metamask Extension](https://metamask.io/)
-
 ## Sign up with invite code
 Head to [EthVigil Beta](https://beta.ethvigil.com/) to generate an invite code.
 
-We use Metamask to securely manage your account with us. You do NOT need to have any gas on mainnet or testnet – we handle the transaction costs for deployments and contract calls. More on [proxying contract calls](https://medium.com/blockvigil/signer-control-cum-proxy-smart-contract-a-look-at-ethvigils-latest-offering-9ad6c098c095) will be explained later.
+Enter your email, password (to generate a local wallet) and fill the captcha to request an invite. We usually send our invites in waves but if you are participating in hackathons such as ETHGlobal or through our partner networks, you will get one instantly.
 
-![Allow Metamask](assets/web-ui/metamask_access.png)
-
-Enter your email and fill the captcha to request an invite. We usually send our invites in waves but if you are participating in hackathons such as ETHIndia, you will get one instantly.
+>Optionally, we use Metamask to securely manage your account with us. You do NOT need to have any gas on mainnet or testnet – we handle the transaction costs for deployments and contract calls. More on [proxying contract calls](https://medium.com/blockvigil/signer-control-cum-proxy-smart-contract-a-look-at-ethvigils-latest-offering-9ad6c098c095) will be explained later.
 
 On the next prompt you will be asked for your invite code. The invite code should have been sent to the email address you used to register.
 
-![Signup with Metamask](assets/web-ui/metamask_signup.png)
-
 Once you are signed up, you'll be taken to a dashboard where you can see all the contracts deployed through EthVigil.
 
-![Dashboard](assets/web-ui/dashboard.png)
+![Dashboard](assets/web-ui/dashboard2.png)
 
 ## Deploy a Solidity smart contract
 
 Head to Remix (or click `New Contract`) to deploy your first smart contract with us. It loads the full Remix IDE, so it make take time on slower connections.
 
-![Remix](assets/web-ui/remix.png)
+![Remix](assets/web-ui/remix2.png)
 
 We have preloaded a `MicroBlog` Smart contract. Deploy the contract by clicking the pulse button. You can enter inputs to the contract constructor but we'll cover more about that later. Also, feel free to add your own contract but we highly recommending starting with `MicroBlog` to see the *effortless* deployment and other features!
 
-![Deploy](assets/web-ui/microblog_deploy.png)
+![Deploy](assets/web-ui/microblog_deploy2.png)
 
 
 ## Using the REST API
