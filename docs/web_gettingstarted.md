@@ -1,6 +1,6 @@
 ---
 id: web_onboarding
-title: Getting Started with GUI
+title: Getting Started with the Web UI
 sidebar_label: Using the Web Interface
 ---
 

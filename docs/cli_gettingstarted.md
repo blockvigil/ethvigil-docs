@@ -9,7 +9,8 @@ The guide will introduce you to the EthVigil API endpoints with the help of a CL
 * access your account information on EthVigil
 * deploy a Solidity smart contract through the CLI tool
 
->If you wish to setup the CLI tool later, skip this section of the guide to use the web interface directly [⏩ ⏩ Using the Web Interface](web_gettingstarted.md)
+>If you wish to setup the CLI tool later, skip this section of the guide to use the web interface directly
+>[⏩ ⏩ Using the Web Interface](web_gettingstarted.md)
 
 ## Recommended Installation
 Download the [Linux](https://github.com/blockvigil/ethvigil-cli/releases/download/preview-a8b2029/ev-cli-linux.zip "Linux Zip File") or [Mac OSX](https://github.com/blockvigil/ethvigil-cli/releases/download/preview-a8b2029/ev-cli-osx.zip "Mac OSX Zip File") binary. You can unzip from a terminal with the following command.
@@ -17,7 +18,7 @@ Download the [Linux](https://github.com/blockvigil/ethvigil-cli/releases/downloa
 
 Most people would keep ev-cli in their primary user folder or set an alias for easy command-line access.
 
-`sudo cp /path/to/ev-cli /usr/local/bin/`
+`sudo cp /path/to/ethvigil-cli/ev-cli /usr/local/bin/`
 
 ## Advanced Installation (via pip)
 
@@ -27,9 +28,38 @@ git clone https://github.com/blockvigil/ethvigil-cli.git
 cd ethvigil-cli
 pip install -e .
 ```
-## Sign up with invite code
 
-Head to [EthVigil Beta](https://beta.ethvigil.com/?clisignup=true) to generate an invite code.
+## Setting up your account
+
+There are a few handy paths you can take to setup or initialize your account on the EthVigil CLI. Choose one of them from the following as it fits your scenario.
+
+### ✅ Reuse your in-browser local wallet settings (No Metamask involved)
+
+If you are already signed up [on the Web UI with a local wallet](web_gettingstarted.md#sign-up-with-invite-code), you can export a `settings.json` file that can be used to initialize the CLI.
+
+Use the `Export Key` option from the `Settings` dropdown to download the `settings.json`
+
+![export EthVigil settings from Web UI screenshot](assets/cli/exportsettings.png)
+
+Next run the following command on your terminal to import these settings
+
+```bash
+ev-cli importsettings path/to/settings.json
+```
+
+>If you do not have ev-cli in your path and/or calling it directly, you will need to prefix `./`
+
+```bash
+./ev-cli importsettings path/to/settings.json
+```
+
+And that's it! Your CLI tool is now ready for further use.
+
+![](assets/cli/ev_cli_importsettings.gif)
+
+### ✅ Generate a new EthVigil invite code and complete signup on CLI
+
+Head to [EthVigil Beta](https://beta.ethvigil.com/?clisignup=true) to generate an invite code. Next you will need to run an init on the CLI tool.
 
 ```bash
 ev-cli init
