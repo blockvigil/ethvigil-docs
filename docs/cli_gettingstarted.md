@@ -71,7 +71,9 @@ On EthVigil APIs, you are primarily idenitified by the above 160 bit address tha
 
 You can import the corresponding private key to a wallet solution like MetaMask.
 
->The keys are locally stored and EthVigil does not have access to them. You can check the `settings.json` file once init is complete.
+>The keys are locally stored and EthVigil does not have access to them. You can check the `~/.ethvigil/settings.json` file once init is complete.
+
+>Feel free to skip to the section **[`Deploy a Solidity smart contract`](cli_gettingstarted.md#deploy-a-solidity-smart-contract)** if you have completed your account setup following the above instructions.
 
 ### ✅ Reuse your in-browser local wallet settings (No Metamask involved)
 
@@ -93,7 +95,7 @@ ev-cli importsettings path/to/settings.json
 ./ev-cli importsettings path/to/settings.json
 ```
 
-And that's it! Your CLI tool is now ready for further use.
+And that's it! Your CLI tool is now ready for further use. The GIF below demonstrates these instructions in action.
 
 ![](assets/cli/ev_cli_importsettings.gif)
 
