@@ -73,7 +73,7 @@ You can import the corresponding private key to a wallet solution like MetaMask.
 
 >The keys are locally stored and EthVigil does not have access to them. You can check the `~/.ethvigil/settings.json` file once init is complete.
 
->Feel free to skip to the section **[`Deploy a Solidity smart contract`](cli_gettingstarted.md#deploy-a-solidity-smart-contract)** if you have completed your account setup following the above instructions.
+>Feel free to skip to the section **[`Get your EthVigil account information`](cli_gettingstarted.md#get-your-ethvigil-account-information)** if you have completed your account setup following the above instructions.
 
 ### ✅ Reuse your in-browser local wallet settings (No Metamask involved)
 
