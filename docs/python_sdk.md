@@ -48,12 +48,12 @@ Either of them should install a python module `ethvigil`
 
 1. #### `pip install` from Github repo
 
-`pip install git+ssh://git@github.com/blockvigil/ethvigil-python-sdk.git`
+`pip install git+https://github.com/blockvigil/ethvigil-python-sdk.git`
 
 2. #### Do a local `pip install` after `git clone`
 
 ```bash
-git clone git@github.com:blockvigil/ethvigil-python-sdk.git
+git clone https://github.com/blockvigil/ethvigil-python-sdk.git
 pip install ethvigil-python-sdk/
 ```
 
