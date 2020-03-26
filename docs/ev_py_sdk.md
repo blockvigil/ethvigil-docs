@@ -69,12 +69,12 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
 
-### Interacting with EthVigil core APIs
+### Initialize EthVigil API instance
 ---
 
 You can find the following usage examples in the [`examples/`](https://github.com/blockvigil/py-ev-sdk/tree/master/examples) directory as well.
 
-#### Initialize `EVCore`
+#### `EVCore`
 ```python
 from ethvigil.EVCore import EVCore  
 evc = EVCore(verbose=False)
@@ -162,6 +162,9 @@ print(contract_instance.addPost(**{
 
 Example source code: [`examples/contract_write_addPost.py`](https://github.com/blockvigil/py-ev-sdk/blob/master/examples/contract_write_addPost.py)
 
+Transactions that change the state of a smart contract take anywhere between 5-15 seconds to get confirmed on the blockchain.
+
+This makes it necessary to build an asynchronous pattern for your blockchain applications. Let us take a look at it in the next section.
 
 ## Webhook integrations: Receive JSON payloads from events and other contract activity
 ---
