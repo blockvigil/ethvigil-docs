@@ -135,15 +135,22 @@ We will be using the contract instance from the above example.
 # This is a 'read' call, does not change state of the contract
 print(contract_instance.blogTitle())
 ``` 
+Example source code: [`examples/contract_read.py`](https://github.com/blockvigil/py-ev-sdk/blob/master/examples/contract_read.py)
+
 ### Writing to a contract
+#### Changing the microblog title 
 ```python
 # calling the changeBlogTitle() function on the contract. 
 # This is a 'write' call, hence it changes state of the contract
 # you can pass the arguments expected by the function as keyword parameters
 # this sends out a transaction on the network
 print(contract_instance.changeBlogTitle(_blogTitle='NewTitle'))
+```
 
+Example source code: [`examples/contract_write_changeBlogTitle.py`](https://github.com/blockvigil/py-ev-sdk/blob/master/examples/contract_write_changeBlogTitle.py)
 
+#### Adding a new post
+```python
 # -- expanding keyword params from a mapping --
 print(contract_instance.addPost(**{
 	'title': 'New2', 
@@ -152,6 +159,9 @@ print(contract_instance.addPost(**{
 	'photo': 'http://imgurl/baz_photo'
 }))
 ```
+
+Example source code: [`examples/contract_write_addPost.py`](https://github.com/blockvigil/py-ev-sdk/blob/master/examples/contract_write_addPost.py)
+
 
 ## Webhook integrations: Receive JSON payloads from events and other contract activity
 ---
