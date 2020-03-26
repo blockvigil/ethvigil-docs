@@ -4,7 +4,10 @@
       "web_onboarding",
       "contracts_restapi"
     ],
-    "EthVigil API usage examples": [
+    "SDKs": [
+      "ev_py_sdk"
+    ],
+    "EthVigil HTTP API usage examples": [
       "erc20_example_code",
       "eth_sign_example_code",
       "eip712_sign_example_code"
