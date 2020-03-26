@@ -10,7 +10,7 @@ To use the EthVigil Python SDK, you need to be signed up for a beta developer ac
 
 **You can choose any of the following approaches.**
 
-###  [Sign up via the CLI tool](https://ethvigil.com/docs/cli_onboarding/), `ev-cli`(Recommended ) 
+### Sign up via the CLI tool `ev-cli` (Recommended )
 
 Follow the instructions sequentially from these steps detailed in the link above. 
 
@@ -24,10 +24,10 @@ This approach allows you to have control on your EthVigil developer account from
 
 Once you have completed this section, head to [Quickstart](#quickstart).
 
-### [Sign up on the web UI](https://ethvigil.com/docs/web_onboarding/)
+### Sign up on the web UI
 
-Once you have signed up on the web UI
-* you have to manually export your settings from the dashboard 
+Once you have [signed up](https://ethvigil.com/docs/web_onboarding/) on the web UI
+* you have to manually export your settings from the dashboard
 ![](https://ethvigil.com/docs/assets/cli/exportsettings.png)
 * To copy the downloaded file into `~/.ethvigil/settings.json` run the following commands in your terminal
 ```bash
