@@ -72,7 +72,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 ### Interacting with EthVigil core APIs
 ---
 
-You can find the following usage examples in the [`examples/`](../examples) directory as well.
+You can find the following usage examples in the [`examples/`](https://github.com/blockvigil/py-ev-sdk/tree/master/examples) directory as well.
 
 #### Initialize `EVCore`
 ```python
@@ -95,7 +95,7 @@ Here is an example:
 ```
 
 ### Deploy a contract
-Find the [`microblog.sol`](../examples/microblog.sol) Solidity smart contract in the [`examples`](../examples/) directory of the SDK github repo.
+Find the [`microblog.sol`](https://github.com/blockvigil/py-ev-sdk/blob/master/examples/microblog.sol) Solidity smart contract in the [`examples`](https://github.com/blockvigil/py-ev-sdk/tree/master/examples) directory of the SDK github repo.
 
 ```python
 from ethvigil.EVCore import EVCore  
@@ -180,7 +180,7 @@ This will forward HTTP requests to a local server running on port `8044`. In the
 
 ###  Step 2: Run the local HTTP server
 
-We have included the code for this in [`examples/sample_webhook_listener.py`](../examples/sample_webhook_listener.py). Open a new tab/window in your terminal and run it
+We have included the code for this in [`examples/sample_webhook_listener.py`](https://github.com/blockvigil/py-ev-sdk/blob/master/examples/sample_webhook_listener.py). Open a new tab/window in your terminal and run it
 
 `python sample_webhook_listener.py`
 
@@ -188,7 +188,7 @@ This starts a tornado server running on port 8044. The example code logs every r
 
 ### Step 3: Register the public `ngrok` URL with EthVigil to receive updates
 
-Example code: [`examples/webhook_integrations.py`](../examples/webhook_integrations.py)
+Example code: [`examples/webhook_integrations.py`](https://github.com/blockvigil/py-ev-sdk/blob/master/examples/webhook_integrations.py)
 
 Copy the `https` URL against the Forwarding information from the running `ngrok` console. It will look something like this:
 
@@ -214,7 +214,7 @@ print(contract_instance.add_event_integration(events=['*'], callback_url=callbac
 print(contract_instance.add_event_integration(events=['NewPost'], callback_url=callback_url))
 ```
 
-Continuing from the [`microblog.sol`](../examples/microblog.sol) example, let us attempt to receive an update the `NewPost` event that is emitted when you call [ `addPost()` on the contract instance](#writing-to-a-contract).
+Continuing from the [`microblog.sol`](https://github.com/blockvigil/py-ev-sdk/blob/master/examples/microblog.sol) example, let us attempt to receive an update the `NewPost` event that is emitted when you call [ `addPost()` on the contract instance](#writing-to-a-contract).
 
 >Note that in the above code snippet we also show you a way to subscribe to all events using the `'*'` wildcard in subscription.
 
@@ -222,7 +222,7 @@ Continuing from the [`microblog.sol`](../examples/microblog.sol) example, let us
 
 Apart from the terminal where `ngrok` is running, open up two more new terminal tabs or windows.
 
-* Run the [`examples/sample_webhook_listener.py`](../examples/sample_webhook_listener.py) file
+* Run the [`examples/sample_webhook_listener.py`](https://github.com/blockvigil/py-ev-sdk/blob/master/examples/sample_webhook_listener.py) file
 * In another one, run the following code snippet as demonstrated in the section **[Writing to a contract](#writing-to-a-contract)**
 
 ```python
