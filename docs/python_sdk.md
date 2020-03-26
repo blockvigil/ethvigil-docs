@@ -1,5 +1,5 @@
 ---
-id: ev_py_sdk
+id: python_sdk
 title: Python SDK 
 sidebar_label: Python
 ---
