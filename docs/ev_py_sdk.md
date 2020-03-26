@@ -220,16 +220,12 @@ contract_instance = evc.generate_contract_sdk(
   
 # the URL to which event updates on the smart contract will be delivered by EthVigil  
 callback_url = 'https://f6192ec6.ngrok.io'  
-# EthVigil will watch over 'all' event updates. Hence the '*' being passed in the expected list of events  
-print(contract_instance.add_event_integration(events=['*'], callback_url=callback_url))  
-  
-# You can also pass in events to be monitored as a list of event names  
+# EthVigil will watch over 'NewPost' event updates.
+# Events to be monitored are specified as a list of event names  
 print(contract_instance.add_event_integration(events=['NewPost'], callback_url=callback_url))
 ```
 
 Continuing from the [`microblog.sol`](https://github.com/blockvigil/py-ev-sdk/blob/master/examples/microblog.sol) example, let us attempt to receive an update the `NewPost` event that is emitted when you call [ `addPost()` on the contract instance](#writing-to-a-contract).
-
->Note that in the above code snippet we also show you a way to subscribe to all events using the `'*'` wildcard in subscription.
 
 ### Step 4: Call `addPost()` and observe the local HTTP server
 
