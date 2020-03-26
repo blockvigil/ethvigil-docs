@@ -1,7 +1,7 @@
 ---
 id: ev_py_sdk
-title: EthVigil Python SDK 
-sidebar_label: EthVigil Python SDK
+title: Python SDK 
+sidebar_label: Python
 ---
 
 ## Prerequisite: Sign up for an EthVigil developer account
@@ -12,7 +12,7 @@ To use the EthVigil Python SDK, you need to be signed up for a beta developer ac
 
 ### Sign up via the CLI tool `ev-cli` (Recommended )
 
-Follow the instructions sequentially from these steps detailed in the link above. 
+Follow the instructions sequentially from these steps detailed in the links below. 
 
 * Install the CLI tool
 	* [Recommended installation via downloadable binary](https://ethvigil.com/docs/cli_onboarding/#recommended-installation)
@@ -48,13 +48,13 @@ Either of them should install a python module `ethvigil`
 
 1. #### `pip install` from Github repo
 
-`pip install git+ssh://git@github.com/blockvigil/py-ethvigil-sdk.git`
+`pip install git+ssh://git@github.com/blockvigil/ethvigil-python-sdk.git`
 
 2. #### Do a local `pip install` after `git clone`
 
 ```bash
-git clone git@github.com:blockvigil/py-ethvigil-sdk.git
-pip install py-ethvigil-sdk/
+git clone git@github.com:blockvigil/ethvigil-python-sdk.git
+pip install ethvigil-python-sdk/
 ```
 
 ### Test import
@@ -72,7 +72,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 ### Initialize EthVigil API instance
 ---
 
-You can find the following usage examples in the [`examples/`](https://github.com/blockvigil/py-ev-sdk/tree/master/examples) directory as well.
+You can find the following usage examples in the [`examples/`](https://github.com/blockvigil/ethvigil-python-sdk/tree/master/examples) directory as well.
 
 #### `EVCore`
 ```python
@@ -95,7 +95,7 @@ Here is an example:
 ```
 
 ### Deploy a contract
-Find the [`microblog.sol`](https://github.com/blockvigil/py-ev-sdk/blob/master/examples/microblog.sol) Solidity smart contract in the [`examples`](https://github.com/blockvigil/py-ev-sdk/tree/master/examples) directory of the SDK github repo.
+Find the [`microblog.sol`](https://github.com/blockvigil/ethvigil-python-sdk/blob/master/examples/microblog.sol) Solidity smart contract in the [`examples`](https://github.com/blockvigil/ethvigil-python-sdk/tree/master/examples) directory of the SDK github repo.
 
 ```python
 from ethvigil.EVCore import EVCore  
@@ -135,7 +135,7 @@ We will be using the contract instance from the above example.
 # This is a 'read' call, does not change state of the contract
 print(contract_instance.blogTitle())
 ``` 
-Example source code: [`examples/contract_read.py`](https://github.com/blockvigil/py-ev-sdk/blob/master/examples/contract_read.py)
+Example source code: [`examples/contract_read.py`](https://github.com/blockvigil/ethvigil-python-sdk/blob/master/examples/contract_read.py)
 
 ### Writing to a contract
 #### Changing the microblog title 
@@ -147,7 +147,7 @@ Example source code: [`examples/contract_read.py`](https://github.com/blockvigil
 print(contract_instance.changeBlogTitle(_blogTitle='NewTitle'))
 ```
 
-Example source code: [`examples/contract_write_changeBlogTitle.py`](https://github.com/blockvigil/py-ev-sdk/blob/master/examples/contract_write_changeBlogTitle.py)
+Example source code: [`examples/contract_write_changeBlogTitle.py`](https://github.com/blockvigil/ethvigil-python-sdk/blob/master/examples/contract_write_changeBlogTitle.py)
 
 #### Adding a new post
 ```python
@@ -160,7 +160,7 @@ print(contract_instance.addPost(**{
 }))
 ```
 
-Example source code: [`examples/contract_write_addPost.py`](https://github.com/blockvigil/py-ev-sdk/blob/master/examples/contract_write_addPost.py)
+Example source code: [`examples/contract_write_addPost.py`](https://github.com/blockvigil/ethvigil-python-sdk/blob/master/examples/contract_write_addPost.py)
 
 Transactions that change the state of a smart contract take anywhere between 5-15 seconds to get confirmed on the blockchain.
 
@@ -193,7 +193,7 @@ This will forward HTTP requests to a local server running on port `8044`. In the
 
 ###  Step 2: Run the local HTTP server
 
-We have included the code for this in [`examples/sample_webhook_listener.py`](https://github.com/blockvigil/py-ev-sdk/blob/master/examples/sample_webhook_listener.py). Open a new tab/window in your terminal and run it
+We have included the code for this in [`examples/sample_webhook_listener.py`](https://github.com/blockvigil/ethvigil-python-sdk/blob/master/examples/sample_webhook_listener.py). Open a new tab/window in your terminal and run it
 
 `python sample_webhook_listener.py`
 
@@ -201,7 +201,7 @@ This starts a tornado server running on port 8044. The example code logs every r
 
 ### Step 3: Register the public `ngrok` URL with EthVigil to receive updates
 
-Example code: [`examples/webhook_integrations.py`](https://github.com/blockvigil/py-ev-sdk/blob/master/examples/webhook_integrations.py)
+Example code: [`examples/webhook_integrations.py`](https://github.com/blockvigil/ethvigil-python-sdk/blob/master/examples/webhook_integrations.py)
 
 Copy the `https` URL against the Forwarding information from the running `ngrok` console. It will look something like this:
 
@@ -225,13 +225,13 @@ callback_url = 'https://f6192ec6.ngrok.io'
 print(contract_instance.add_event_integration(events=['NewPost'], callback_url=callback_url))
 ```
 
-Continuing from the [`microblog.sol`](https://github.com/blockvigil/py-ev-sdk/blob/master/examples/microblog.sol) example, let us attempt to receive an update the `NewPost` event that is emitted when you call [ `addPost()` on the contract instance](#writing-to-a-contract).
+Continuing from the [`microblog.sol`](https://github.com/blockvigil/ethvigil-python-sdk/blob/master/examples/microblog.sol) example, let us attempt to receive an update the `NewPost` event that is emitted when you call [ `addPost()` on the contract instance](#writing-to-a-contract).
 
 ### Step 4: Call `addPost()` and observe the local HTTP server
 
 Apart from the terminal where `ngrok` is running, open up two more new terminal tabs or windows.
 
-* Run the [`examples/sample_webhook_listener.py`](https://github.com/blockvigil/py-ev-sdk/blob/master/examples/sample_webhook_listener.py) file
+* Run the [`examples/sample_webhook_listener.py`](https://github.com/blockvigil/ethvigil-python-sdk/blob/master/examples/sample_webhook_listener.py) file
 * In another one, run the following code snippet as demonstrated in the section **[Writing to a contract](#writing-to-a-contract)**
 
 ```python
