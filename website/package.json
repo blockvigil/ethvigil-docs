@@ -9,7 +9,8 @@
     "rename-version": "docusaurus-rename-version"
   },
   "devDependencies": {
-    "docusaurus": "^1.14.0",
+    "docusaurus": "^1.14.4",
+    "kind-of": "^6.0.3",
     "remarkable-extlink": "^1.1.0"
   }
 }
