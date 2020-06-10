@@ -142,7 +142,7 @@ ev-cli deploy <path-to-solidity-contract> \
 ```
 >Currently EthVigil API accepts Solidity files that import other Solidity files containing smart contracts and library code, **within the same directory**. For example, your imports must be of the form `import './SafeMath.sol'` denoting that `SafeMath.sol` is to be found in the same directory.
 
->We will soon add support for parsing relative import paths as well. Feel free to create a pull request against our [Github repo](https://github,com/blockvigil/ethvigil-cli) or chat with us on the [public discord channel]() if you wish to contribute to solving this.
+>We will soon add support for parsing relative import paths as well. Feel free to create a pull request against our [Github repo](https://github,com/blockvigil/ethvigil-cli) or chat with us on the [public discord channel](https://discord.gg/5zaS3fv) if you wish to contribute to solving this.
 
 ### ERC20 token contract example - ERC20Mintable.sol
 ```bash
