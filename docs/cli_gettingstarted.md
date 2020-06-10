@@ -13,8 +13,8 @@ The guide will introduce you to the EthVigil API endpoints with the help of a CL
 >[⏩ ⏩ Using the Web Interface](web_gettingstarted.md)
 
 ## Recommended Installation
-Download the [Linux](https://github.com/blockvigil/ethvigil-cli/releases/download/preview-a8b2029/ev-cli-linux.zip "Linux Zip File") or [Mac OSX](https://github.com/blockvigil/ethvigil-cli/releases/download/preview-a8b2029/ev-cli-osx.zip "Mac OSX Zip File") binary. You can unzip from a terminal with the following command.
-`unzip /path/to/ev-cli.zip`
+Download the [Linux](https://github.com/blockvigil/ethvigil-cli/releases/download/preview-481bed0/ev-cli-linux.zip "Linux Zip File") or [Mac OSX](https://github.com/blockvigil/ethvigil-cli/releases/download/preview-481bed0/ev-cli-osx.zip "Mac OSX Zip File") binary. You can unzip from a terminal with the following command.
+`unzip /path/to/ev-cli-<platform>.zip`
 
 Most people would keep ev-cli in their primary user folder or set an alias for easy command-line access.
 
@@ -120,27 +120,18 @@ REST API prefix: 	 http://localhost:9000/api/v0.1
 
 Contracts deployed/verified:
 =============
-Name: FixedSupplyToken
-Address: 0xb8254a02fa7da599053006913bbed0a13fa0385f
---------------------
-Name: FixedSupplyToken
-Address: 0x7b5622290fd8fb7b89707a7dc68201d5eb833507
---------------------
 Name: SignerControlBase
 Address: 0x746254cb1888a0f073fca2cf397457fb3e54396f
 --------------------
-Name: FixedSupplyToken
-Address: 0xbbd8cda5503e1df2983f738ad131a2304528e3dd
---------------------
-Name: Ballot
-Address: 0x616cc6fd735462df69fc0f5bdb61bc12921b3b17
+Name: ERC20Mintable
+Address: 0xaec35285e21045bd4f159165015cc1f9df14c13e
 --------------------
 ```
 
 ## Deploy a Solidity smart contract
 
 We have included a couple of smart contracts written in Solidity in the code repo to help you test out their deployment right away.
-You can find them in `token.sol` and `SignerControlBase.sol`
+You can find them under `contracts/` as `ERC20Mintable.sol` and `SignerControlBase.sol`
 
 The syntax to deploy a contract through the CLI tool is:
 
@@ -149,17 +140,19 @@ ev-cli deploy <path-to-solidity-contract> \
  --contractName=<contract-name> \
  --constructorInputs='JSON representation of the constructor arguments'
 ```
->Currently EthVigil API accepts **only one** Solidity file that contains the entire smart contract logic. It will be enhanced in the near future where we will allow multiple files to be uploaded to ease development with imports of other modules and libraries
+>Currently EthVigil API accepts Solidity files that import other Solidity files containing smart contracts and library code, **within the same directory**. For example, your imports must be of the form `import './SafeMath.sol'` denoting that `SafeMath.sol` is to be found in the same directory.
 
-### ERC20 token contract example - token.sol
+>We will soon add support for parsing relative import paths as well. Feel free to create a pull request against our [Github repo](https://github,com/blockvigil/ethvigil-cli) or chat with us on the [public discord channel](https://discord.gg/5zaS3fv) if you wish to contribute to solving this.
+
+### ERC20 token contract example - ERC20Mintable.sol
 ```bash
-ev-cli deploy token.sol --contractName=FixedSupplyToken
+ev-cli deploy contracts/ERC20Mintable.sol --contractName=ERC20Mintable --constructorInputs='["TestTokenName", "SYMB", 18]'
 
-Contract FixedSupplyToken deployed successfully
-Contract Address: 0xb8254a02fa7da599053006913bbed0a13fa0385f
-Deploying tx: 0xd5318cf2bc163e267fecbb85ad2688f088fb2f45bc93baa1d9530f2d23b64a26
+Contract ERC20Mintable deployed successfully
+Contract Address: 0xaec35285e21045bd4f159165015cc1f9df14c13e
+Deploying tx: 0x17a8009565731f45a1621905a7e85e84a6330b485ac3e7e450d90f126b6c3006
 ```
-Observe that `--constructorInputs` has been left empty. It is optional for contracts that have no constructor inputs programmed.
+Observe that we are setting `--constructorInputs`. It is optional for contracts that have no constructor inputs programmed.
 
 ### SignerControlBase.sol
 
