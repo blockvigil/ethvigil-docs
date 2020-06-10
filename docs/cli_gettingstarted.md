@@ -14,7 +14,7 @@ The guide will introduce you to the EthVigil API endpoints with the help of a CL
 
 ## Recommended Installation
 Download the [Linux](https://github.com/blockvigil/ethvigil-cli/releases/download/preview-481bed0/ev-cli-linux.zip "Linux Zip File") or [Mac OSX](https://github.com/blockvigil/ethvigil-cli/releases/download/preview-481bed0/ev-cli-osx.zip "Mac OSX Zip File") binary. You can unzip from a terminal with the following command.
-`unzip /path/to/ethvigil.zip`
+`unzip /path/to/ev-cli-<platform>.zip`
 
 Most people would keep ev-cli in their primary user folder or set an alias for easy command-line access.
 
@@ -152,7 +152,7 @@ Contract ERC20Mintable deployed successfully
 Contract Address: 0xaec35285e21045bd4f159165015cc1f9df14c13e
 Deploying tx: 0x17a8009565731f45a1621905a7e85e84a6330b485ac3e7e450d90f126b6c3006
 ```
-Observe that `--constructorInputs` has been left empty. It is optional for contracts that have no constructor inputs programmed.
+Observe that we are setting `--constructorInputs`. It is optional for contracts that have no constructor inputs programmed.
 
 ### SignerControlBase.sol
 
