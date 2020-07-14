@@ -6,6 +6,17 @@ module.exports = {
   favicon: 'img/square.png',
   organizationName: 'blockvigil', // Usually your GitHub org/user name.
   projectName: 'ethvigil-docs', // Usually your repo name.
+  plugins: [
+      '@docusaurus/plugin-google-analytics',
+      [
+          '@docusaurus/plugin-sitemap',
+          {
+            cacheTime: 600 * 1000, // 600 sec - cache purge period
+            changefreq: 'weekly',
+            priority: 0.5,
+          },
+      ],
+  ],
   themeConfig: {
     navbar: {
       title: 'EthVigil',
@@ -80,9 +91,9 @@ module.exports = {
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} BlockVigil, Inc. Built with Docusaurus.`,
-      googleAnalytics: {
-        trackingID: 'UA-113891968-1',
-      },
+    },
+    googleAnalytics: {
+      trackingID: 'UA-113891968-1',
     },
   },
   presets: [
