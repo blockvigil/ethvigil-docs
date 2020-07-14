@@ -1,6 +1,8 @@
-{
-  "docs": {
-    "Getting Started": ["cli_onboarding",
+module.exports = {
+  someSidebar: {
+    "Getting Started": [
+      "ethvigil_intro",
+      "cli_onboarding",
       "web_onboarding",
       "contracts_restapi"
     ],
@@ -15,5 +17,5 @@
     "Contests": [
       "pycon2019_giveaway"
     ]
-  }
-}
+  },
+};
