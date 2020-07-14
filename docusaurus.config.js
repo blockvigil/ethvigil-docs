@@ -80,6 +80,9 @@ module.exports = {
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} BlockVigil, Inc. Built with Docusaurus.`,
+      googleAnalytics: {
+        trackingID: 'UA-113891968-1',
+      },
     },
   },
   presets: [
