@@ -1,6 +1,6 @@
 module.exports = {
   title: 'EthVigil', // Title for your website.
-  tagline: 'Documentation for EthVigil APIs',
+  tagline: 'Documentation for Ethereum APIs',
   url: 'https://ethvigil.com', // Your website URL
   baseUrl: '/',
   favicon: 'img/square.png',

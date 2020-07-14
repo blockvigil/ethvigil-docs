@@ -12,7 +12,7 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
-        We allow you to build fullstack apps on blockchain, without learning protocol specifics.
+        We allow you to build fullstack apps on Ethereum, without learning protocol specifics.
       </>
     ),
   },
@@ -21,7 +21,7 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_tree.svg',
     description: (
       <>
-        Our <code>docs</code> cater to every developer, all the way from beginners to advanced. We also provide examples to build upon.
+        Our <code>docs</code> cater to every developer, all the way from beginners to those already building dapps via web3. We also provide examples to build upon.
       </>
     ),
   },
@@ -30,7 +30,7 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_react.svg',
     description: (
       <>
-        Smart contracts are quickly deployed through our system and the resulting API is instantly available to start testing.
+        Smart contracts are quickly deployed through our system and the resulting Open API along with webhook and websockets are instantly available to start testing.
       </>
     ),
   },
