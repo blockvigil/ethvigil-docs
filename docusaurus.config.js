@@ -38,7 +38,7 @@ module.exports = {
         },
         {
           href: 'https://github.com/blockvigil/ethvigil-docs',
-          label: 'GitHub',
+          label: 'Fork on GitHub',
           position: 'right',
         },
       ],
