@@ -4,7 +4,7 @@ title: About EthVigil
 sidebar_label: About EthVigil
 ---
 
-EthVigil presents an API gateway on top of Ethereum that allows one to write code to interact with blockchain value transfers and transactions as if it were talking to just another web service REST API over HTTP.
+EthVigil presents an API gateway on top of Ethereum that allows you to write code to interact with blockchain value transfers and transactions as if it were talking to just another web service REST API over HTTP.
 
 * You can focus on coding "business logic" without worrying about the "protocol logic" behind the scenes.
 

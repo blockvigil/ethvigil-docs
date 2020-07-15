@@ -21,7 +21,7 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_tree.svg',
     description: (
       <>
-        Our <code>docs</code> cater to every developer, all the way from beginners to those already building dapps via web3. We also provide examples to build upon.
+        Our <code>docs</code> cater to every developer, all the way from beginners to those already building dapps via web3, and provide examples to build upon.
       </>
     ),
   },
