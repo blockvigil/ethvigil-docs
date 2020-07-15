@@ -1,6 +1,8 @@
-{
-  "docs": {
-    "Getting Started": ["cli_onboarding",
+module.exports = {
+  someSidebar: {
+    "Getting Started": [
+      "ethvigil_intro",
+      "cli_onboarding",
       "web_onboarding",
       "contracts_restapi"
     ],
@@ -12,8 +14,5 @@
       "eth_sign_example_code",
       "eip712_sign_example_code"
     ],
-    "Contests": [
-      "pycon2019_giveaway"
-    ]
-  }
-}
+  },
+};

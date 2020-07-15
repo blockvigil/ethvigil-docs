@@ -28,7 +28,7 @@ Once you have completed this section, head to [Quickstart](#quickstart).
 
 Once you have [signed up](https://ethvigil.com/docs/web_onboarding/) on the web UI
 * you have to manually export your settings from the dashboard
-![](https://ethvigil.com/docs/assets/cli/exportsettings.png)
+![](assets/cli/exportsettings.png)
 * To copy the downloaded file into `~/.ethvigil/settings.json` run the following commands in your terminal
 ```bash
 cd ~
@@ -177,7 +177,8 @@ You can use these updates to enhance your blockchain applications and execute fu
 
 For this example, we shall use [`ngrok`](https://ngrok.com/) to setup a publicly available URL in the format `https://<randomstring>.ngrok.com` . The tool receives HTTP payloads on this public URL and forwards them to a local HTTP server (running on your computer). 
 
-![ngrok HTTP tunneling](https://ngrok.com/static/img/demo.png)
+![ngrok HTTP tunneling](assets/py-sdk/ngrok.png)
+_Image Credit: Ngrok.com_
 
 > Technically this is known as HTTP tunnelling but let's not worry about semantics right now.
 
