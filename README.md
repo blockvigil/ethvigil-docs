@@ -28,7 +28,13 @@ This command generates static content into the `build` directory and can be serv
 $ cp -r docs/assets build/docs/
 ```
 
-Docusaurus v2 changed the way (https://v2.docusaurus.io/docs/static-assets)[static assets] are loaded. We want to keep things simple from a Markdown perspective and hence the post build step.
+Docusaurus v2 changed the way [static assets](https://v2.docusaurus.io/docs/static-assets) are loaded. We want to keep things simple from a Markdown perspective and hence the post build step.
+
+```
+$ cp static/sitemap.xml build/
+```
+
+Docusaurus v2 sitemaps are broken on build (work fine on dev).
 
 ### Deployment
 
