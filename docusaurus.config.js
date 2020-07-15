@@ -18,6 +18,7 @@ module.exports = {
       ],
   ],
   themeConfig: {
+    image: 'img/square.png',
     navbar: {
       title: 'EthVigil',
       logo: {
