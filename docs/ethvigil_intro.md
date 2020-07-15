@@ -12,6 +12,8 @@ EthVigil presents an API gateway on top of Ethereum that allows you to write cod
 
 * Configure further integrations with webservices (Webhooks/IFTTT applets/Websockets), email, slack and many more based on our monitoring system over smart contract events and specific Ethereum transactions.
 
+![EthVigil development lifecycle](assets/intro/ethvigil_intro.png)
+
 # Why EthVigil
 
 EthVigil takes care of the heavy lifting needed to conform with protocol specific logic like:
