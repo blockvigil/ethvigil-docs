@@ -24,6 +24,12 @@ $ yarn build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
+```
+$ cp -r docs/assets build/docs/
+```
+
+Docusaurus v2 changed the way (https://v2.docusaurus.io/docs/static-assets)[static assets] are loaded. We want to keep things simple from a Markdown perspective and hence the post build step.
+
 ### Deployment
 
 ```
