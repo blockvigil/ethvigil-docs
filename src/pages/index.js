@@ -56,7 +56,7 @@ function Home() {
   const {siteConfig = {}} = context;
   return (
     <Layout
-      title={`${siteConfig.title}`}
+      title={`Home`}
       description="Documentation for Ethereum APIs">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
