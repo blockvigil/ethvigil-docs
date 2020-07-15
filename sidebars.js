@@ -14,8 +14,5 @@ module.exports = {
       "eth_sign_example_code",
       "eip712_sign_example_code"
     ],
-    "Contests": [
-      "pycon2019_giveaway"
-    ]
   },
 };
