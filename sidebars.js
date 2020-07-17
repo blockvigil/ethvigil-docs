@@ -6,6 +6,9 @@ module.exports = {
       "web_onboarding",
       "contracts_restapi"
     ],
+    "API Reference": [
+      "ws_api"
+    ],
     "SDK": [
       "python_sdk"
     ],
