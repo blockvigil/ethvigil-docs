@@ -28,7 +28,7 @@ You will need to copy over the API write key from the EthVigil dashboard. Connec
 
 ### Authentication and connection initialization
 
-The client sends a message of the following format. The 'read' API key can be found from your [EthVigil dashboard](https://beta.ethvigil.com) when you open up any contract in there.
+The client sends a message of the following format. The **read** API key can be found from the CLI by calling `ev-cli accountinfo` or from [EthVigil Swagger](https://beta.ethvigil.com/#swagger) when you open up any contract in there.
 
 ```json
 {
