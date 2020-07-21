@@ -7,7 +7,7 @@ module.exports = {
       "contracts_restapi"
     ],
     "API Reference": [
-      "ws_api"
+      "websocket_api"
     ],
     "SDK": [
       "python_sdk"

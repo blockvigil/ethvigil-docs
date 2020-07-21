@@ -1,5 +1,5 @@
 ---
-id: ws_api
+id: websocket_api
 title: Real-time Ethereum streams with EthVigil Websockets
 sidebar_label: Websocket stream APIs
 ---
@@ -169,6 +169,11 @@ Such messages can be identified by the `"type": "otm"` field.
 ### Python
 
 You can find an implementation of the client side protocol [in Python in our SDK repository on Github.](https://github.com/blockvigil/ethvigil-python-sdk/blob/master/examples/auditlog/websocket_listener.py).
+
+You can also find this code in action in a working example in a post on our engineering blog.
+
+* [**Build Ethereum apps on Python with EthVigil SDK**](https://medium.com/blockvigil/build-ethereum-apps-on-python-with-ethvigil-sdk-517abdb25979)
+
 
 ```python
 import json
