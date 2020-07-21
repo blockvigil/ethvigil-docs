@@ -21,7 +21,7 @@ The contract being used for this guide comes bundled with the CLI tool by the na
 
 #### Web UI
 
-On visiting the contract's dashboard, you can find the OpenAPI spec link right above the name of the contract.
+On visiting the contract's dashboard, you can find the OpenAPI spec link on the top left corner with a copy button and as well as right above the name of the contract.
 
 ![OpenAPI spec link on web UI](assets/web-ui/openAPI_link.png)
 
