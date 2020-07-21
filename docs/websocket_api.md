@@ -184,7 +184,7 @@ import queue
 import threading
 import time
 
-
+# `update_q` is a thread-safe queue that another thread can consume from 
 async def consumer_contract(read_api_key, update_q: queue.Queue):
     async with websockets.connect('wss://beta.ethvigil.com/ws') as ws:
         await ws.send(json.dumps({'command': 'register', 'key': read_api_key}))
@@ -203,14 +203,12 @@ async def consumer_contract(read_api_key, update_q: queue.Queue):
                 return
         sessionID = ack['sessionID']
         print('\nReceived Websocket Session ID: ', sessionID)
-        # async for msg in ws:
-        #    print(msg)
         while True:
             try:
                 async with async_timeout.timeout(10):
                     msg = await ws.recv()
-                    # observed: heartbeat messages being delivered out of sequence, gotta ignore
                     if json.loads(msg).get('command') != 'heartbeat':
+                        print(msg)
                         update_q.put(msg)
             except asyncio.TimeoutError:
                 await ws.send(json.dumps({'command': 'heartbeat', 'sessionID': sessionID}))

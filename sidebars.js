@@ -6,8 +6,8 @@ module.exports = {
       "web_onboarding"
     ],
     "API Reference": [
-      "websocket_api",
-      "contracts_restapi"
+      "contracts_restapi",
+      "websocket_api"
     ],
     "SDK": [
       "python_sdk"
