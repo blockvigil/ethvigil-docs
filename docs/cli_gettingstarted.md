@@ -145,6 +145,7 @@ ev-cli deploy <path-to-solidity-contract> \
 >We will soon add support for parsing relative import paths as well. Feel free to create a pull request against our [Github repo](https://github,com/blockvigil/ethvigil-cli) or chat with us on the [public discord channel](https://discord.gg/5zaS3fv) if you wish to contribute to solving this.
 
 ### ERC20 token contract example - ERC20Mintable.sol
+
 ```bash
 ev-cli deploy contracts/ERC20Mintable.sol --contractName=ERC20Mintable --constructorInputs='["TestTokenName", "SYMB", 18]'
 
@@ -153,6 +154,20 @@ Contract Address: 0xaec35285e21045bd4f159165015cc1f9df14c13e
 Deploying tx: 0x17a8009565731f45a1621905a7e85e84a6330b485ac3e7e450d90f126b6c3006
 ```
 Observe that we are setting `--constructorInputs`. It is optional for contracts that have no constructor inputs programmed.
+
+If you do not pass the `--constructorInputs` argument, you shall be prompted for the same.
+
+```
+ev-cli deploy contracts/ERC20Mintable.sol --contractName='ERC20Mintable'
+
+Enter constructor inputs...
+name(string): TestToken
+symbol(string): TTK
+decimals(uint8): 18
+Contract ERC20Mintable deployed successfully
+Contract Address: 0x9290b03870b0c4c99cc3c1e1dfcfa1ff789af6c0
+Deploying tx: 0x699af417f4349f9e29d63dbc894874b5ae865fefe8e7a6bb2365339fab774211
+```
 
 ### SignerControlBase.sol
 
