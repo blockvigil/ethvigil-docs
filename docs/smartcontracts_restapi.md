@@ -17,7 +17,7 @@ ev-cli getoas 0xbbd8cda5503e1df2983f738ad131a2304528e3dd
 
 https://beta.ethvigil.com/api/swagger/0xbbd8cda5503e1df2983f738ad131a2304528e3dd/?key=80340b2a-633b-4a33-898c-06055ee10a34
 ```
-The contract being used for this guide comes bundled with the CLI tool by the name `ERC20MintablePresupplied.sol` and implements the standard interface for an [ERC20 token contract](https://eips.ethereum.org/EIPS/eip-20). The modification introduced is where the Ethereum account that deploys the contract automatically gets a number of minted tokens, `1000000000000000000000000` to be exact.
+The contract being used for this guide comes bundled with the CLI tool by the name [`ERC20MintablePresupplied.sol`](https://github.com/blockvigil/ethvigil-cli/blob/master/contracts/ERC20MintablePresupplied.sol) and implements the standard interface for an [ERC20 token contract](https://eips.ethereum.org/EIPS/eip-20). The modification introduced is where the Ethereum account that deploys the contract automatically gets a number of minted tokens, `1000000000000000000000000` to be exact.
 
 #### Web UI
 
