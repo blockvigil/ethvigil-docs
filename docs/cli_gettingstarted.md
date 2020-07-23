@@ -13,7 +13,7 @@ The guide will introduce you to the EthVigil API endpoints with the help of a CL
 >[⏩ ⏩ Using the Web Interface](web_gettingstarted.md)
 
 ## Recommended Installation
-Download the [Linux](https://github.com/blockvigil/ethvigil-cli/releases/download/v0.3/ev-cli-linux.zip "Linux Zip File") or [Mac OSX](https://github.com/blockvigil/ethvigil-cli/releases/download/v0.3/ev-cli-osx.zip "Mac OSX Zip File") binary. You can unzip from a terminal with the following command.
+Download the [Linux](https://github.com/blockvigil/ethvigil-cli/releases/download/v0.3.1/ev-cli-linux.zip "Linux Zip File") or [Mac OSX](https://github.com/blockvigil/ethvigil-cli/releases/download/v0.3.1/ev-cli-osx.zip "Mac OSX Zip File") binary. You can unzip from a terminal with the following command.
 `unzip /path/to/ev-cli-<platform>.zip`
 
 Most people would keep ev-cli in their primary user folder or set an alias for easy command-line access.
