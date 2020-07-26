@@ -3,8 +3,11 @@ module.exports = {
     "Getting Started": [
       "ethvigil_intro",
       "cli_onboarding",
-      "web_onboarding",
-      "contracts_restapi"
+      "web_onboarding"
+    ],
+    "API Reference": [
+      "contracts_restapi",
+      "websocket_api"
     ],
     "SDK": [
       "python_sdk"
