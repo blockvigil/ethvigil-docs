@@ -112,10 +112,13 @@ Contracts events fired to registered hooks: 	 {'usage': 0, 'limit': 1000}
 Registered integrations/hooks: 	 {'usage': 1, 'limit': 10}
 =============
 
-EthVigil API key: 	 80340b2a-633b-4a33-898c-06055ee10a34
+EthVigil API (secret) key: 	 80340b2a-633b-4a33-898c-06055ee10a34
 =============
 
-REST API prefix: 	 http://localhost:9000/api/v0.1
+EthVigil API (read) key: 	 0ab4a826-bdda-4910-af33-e7ac8d0f0ec4
+=============
+
+REST API prefix: 	 https://beta-api.ethvigil.com/v0.1
 =============
 
 Contracts deployed/verified:
