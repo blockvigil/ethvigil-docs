@@ -22,12 +22,6 @@ module.exports = {
             priority: 0.5,
           },
       ],
-      [
-          '@docusaurus/plugin-pwa',
-          {
-              id: 'pwa'
-          }
-      ],
   ],
   themeConfig: {
     image: 'img/ev-docs.png',
