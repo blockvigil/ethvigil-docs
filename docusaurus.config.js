@@ -7,10 +7,16 @@ module.exports = {
   organizationName: 'blockvigil', // Usually your GitHub org/user name.
   projectName: 'ethvigil-docs', // Usually your repo name.
   plugins: [
-      '@docusaurus/plugin-google-analytics',
+      [
+          '@docusaurus/plugin-google-analytics',
+          {
+              id: 'analytics'
+          }
+      ],
       [
           '@docusaurus/plugin-sitemap',
           {
+            id: 'sitemap',
             cacheTime: 600 * 1000, // 600 sec - cache purge period
             changefreq: 'weekly',
             priority: 0.5,
@@ -25,7 +31,7 @@ module.exports = {
         alt: 'BlockVigil Logo',
         src: 'img/square.png',
       },
-      links: [
+      items: [
         {
           to: 'docs/',
           activeBasePath: 'docs',
@@ -105,7 +111,7 @@ module.exports = {
           // It is recommended to set document id as docs home page (`docs/` path).
           homePageId: 'ethvigil_intro',
           sidebarPath: require.resolve('./sidebars.js'),
-          //editUrl: 'https://github.com/blockvigil/ethvigil-docs/edit/master/website/',
+          editUrl: 'https://github.com/blockvigil/ethvigil-docs/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
