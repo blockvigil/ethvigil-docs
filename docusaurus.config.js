@@ -111,7 +111,7 @@ module.exports = {
           // It is recommended to set document id as docs home page (`docs/` path).
           homePageId: 'ethvigil_intro',
           sidebarPath: require.resolve('./sidebars.js'),
-          //editUrl: 'https://github.com/blockvigil/ethvigil-docs/edit/master/website/',
+          editUrl: 'https://github.com/blockvigil/ethvigil-docs/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
