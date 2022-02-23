@@ -27,7 +27,7 @@ Once you are signed up, you'll be taken to a dashboard where you can see all the
 
 ## Deploy a Solidity smart contract
 
-Head to Remix (or click `New Contract`) to deploy your first smart contract with us. It loads the full Remix IDE, so it make take time on slower connections.
+Head to Remix (or click `New Contract`) to deploy your first smart contract with us. It loads the full Remix IDE, so it may take time on slower connections.
 
 ![Remix](assets/web-ui/remix2.png)
 
@@ -44,7 +44,7 @@ You will now be taken to a `Swagger UI` page which allows you to interact with o
 
 *🍪 Brownie points for those who noticed the little websocket notification about the contract tx getting mined 🎉*
 
-Try out any of the calls such as `/blockTitle` and see the response without having to *write any code*. You can also take the `curl` example and try it directly in your browser or a terminal
+Try out any of the calls such as `/blogTitle` and see the response without having to *write any code*. You can also take the `curl` example and try it directly in your browser or a terminal
 
 ![Get Call](assets/web-ui/swagger_get.png)
 
@@ -54,7 +54,7 @@ Now, reading from Blockchain may be easy. But ensuring write calls go through wi
 
 ## Adding integrations
 
-Let's back to the add dashboard where you can add integrations like webhooks/email notifications/slack notifications on a contract deployed via EthVigil APIs.
+Let's go back to the add dashboard where you can add integrations like webhooks/email notifications/slack notifications on a contract deployed via EthVigil APIs.
 * You can monitor
   * specific/all events being emitted on a contract
   * all transactions taking place on a contract
